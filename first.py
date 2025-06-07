@@ -27,3 +27,10 @@ print(myset2)
 prices=[100,300,400,250]
 mydict = {key:value for (key,value) in zip(products,prices)}
 print(mydict)"""
+var =500
+def myfunc():
+    var=100
+    print(var)
+myfunc()
+var = 300
+print(var)
