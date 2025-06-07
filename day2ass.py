@@ -7,7 +7,7 @@ flt = float(input("Enter a float value: "))
 lst.extend([num, name, flt])
 
 new_name = input("Enter another name to insert at 2nd position: ")
-lst.insert(1, new_name)  # 2nd position index is 1
+lst.insert(1, new_name)
 
 num_to_append = int(input("Enter a number to append at the end: "))
 lst.append(num_to_append)
@@ -269,4 +269,262 @@ if is_pangram(s):
     print("It is a pangram")
 else:
     print("It is not a pangram")
+"""
+
+#Dictonary Question
+# Question 1
+"""
+students = {}
+for i in range(1, 6):
+    name = input(f"Enter name of student {i}: ")
+    students[i] = name
+print("Student dictionary:", students)
+"""
+
+# Question 2
+"""
+products = {'soap': 100, 'deo': 300, 'perfume': 400}
+product_name = input("Enter product name: ").lower()
+price = products.get(product_name)
+if price is not None:
+    print("Price:", price)
+else:
+    print("product not available")
+"""
+
+# Question 3
+"""
+class Student:
+    def __init__(self, name, age, address, qualification):
+        self.name = name
+        self.age = age
+        self.address = address
+        self.qualification = qualification
+
+    def __str__(self):
+        return f"Name: {self.name}, Age: {self.age}, Address: {self.address}, Qualification: {self.qualification}"
+
+s1 = Student("Amit", 21, "Delhi", "B.Sc")
+s2 = Student("Sara", 22, "Mumbai", "B.Tech")
+s3 = Student("John", 20, "Chennai", "B.Com")
+s4 = Student("Riya", 23, "Kolkata", "M.Sc")
+
+students_dict = {
+    1: s1,
+    2: s2,
+    3: s3,
+    4: s4
+}
+
+rollno = int(input("Enter roll number: "))
+student = students_dict.get(rollno)
+if student:
+    print(student)
+else:
+    print("student not found")
+"""
+
+# Question 4
+"""
+people = {'Arham': 'Blue', 'Lisa': 'Yellow', 'Vinod': 'Purple', 'Jenny': 'Pink'}
+
+print("1. Number of students:", len(people))
+
+people['Lisa'] = 'Green'
+print("2. Lisa's new favourite colour:", people['Lisa'])
+
+people.pop('Jenny')
+print("3. Dictionary after removing Jenny:", people)
+
+print("4. Sorted students and their colours:")
+for name in sorted(people):
+    print(name, ":", people[name])
+"""
+
+#List_Dicotnary
+# Question 1
+"""
+d = {
+    'x': list(range(11, 20)),
+    'y': list(range(21, 30)),
+    'z': list(range(31, 40))
+}
+print(d['x'][4])
+print(d['y'][4])
+print(d['z'][4])
+"""
+
+# Question 2
+"""
+d = {0: 10, 1: 20}
+d[2] = 30
+print(d)
+"""
+
+# Question 3
+"""
+d = {'a': 1, 'b': 2}
+key = input()
+if key in d:
+    print("Key exists.")
+else:
+    print("Key does not exist.")
+"""
+
+# Question 4
+"""
+data = [
+    {'id': 1, 'success': True, 'name': 'Lary'},
+    {'id': 2, 'success': False, 'name': 'Rabi'},
+    {'id': 3, 'success': True, 'name': 'Alex'}
+]
+count = 0
+for item in data:
+    if item.get('success') == True:
+        count += 1
+print(count)
+"""
+
+# Question 5
+"""
+keys = ['Class-V', 'Class-VI', 'Class-VII', 'Class-VIII']
+values = [1, 2, 2, 3]
+result = {}
+for i in range(len(keys)):
+    key = keys[i]
+    val = values[i]
+    if key not in result:
+        result[key] = set()
+    result[key].add(val)
+print(result)
+"""
+
+# Question 6
+"""
+d = {}
+if len(d) == 0:
+    print("Dictionary is empty")
+else:
+    print("Dictionary is not empty")
+"""
+
+# Question 7
+"""
+from collections import Counter
+d1 = {'a': 100, 'b': 200, 'c': 300}
+d2 = {'a': 300, 'b': 200, 'd': 400}
+c1 = Counter(d1)
+c2 = Counter(d2)
+result = c1 + c2
+print(result)
+"""
+
+# Question 8
+"""
+mydictionary1 = {
+    'Names': ['Rohit', 'Ganesh', 'SRK', 'Akshay'],
+    'age': 40,
+    'addresses': ['Mumbai', 'Delhi', 'Kolkara', 'Banglore'],
+    'emails': ['actor.gmail.com', 'movie.gmail.com']
+}
+total = 0
+for v in mydictionary1.values():
+    if isinstance(v, list):
+        total += len(v)
+print(total)
+"""
+
+# Question 9
+"""
+s = 'w3resource'
+d = {}
+for ch in s:
+    d[ch] = d.get(ch, 0) + 1
+print(d)
+"""
+
+# Question 10
+"""
+mydictionary = {1:'xyz', 3:'abc', 5:'pqr', 2:'xzz'}
+for k, v in mydictionary.items():
+    print(k, v)
+print(len(mydictionary))
+"""
+
+# Question 11
+"""
+d = {'a': 100, 'b': 200, 'c': 50}
+print(max(d.values()))
+print(min(d.values()))
+"""
+
+# Question 12
+"""
+prnnos = [1, 2, 3, 4, 5, 6]
+names = ['abc', 'def', 'pqr', 'lmn', 'xyz', 'uvw']
+d = dict(zip(prnnos, names))
+print(d)
+"""
+
+# Question 13
+"""
+x = {'key1': 1, 'key2': 3, 'key3': 2}
+y = {'key1': 1, 'key2': 2}
+for k in x:
+    if k in y and x[k] == y[k]:
+        print(f"{k}: {x[k]} is present in both x and y")
+"""
+
+# Question 14
+"""
+Players = {
+    'Rohit': {'runs': 10000, 'centuries': 15},
+    'Virat': {'runs': 12000, 'centuries': 18}
+}
+for player, stats in Players.items():
+    print(player)
+    for stat_key, stat_val in stats.items():
+        print(stat_key, ":", stat_val)
+"""
+
+# Question 15
+"""
+d = {'a': 1, 'b': 2, 'c': 3}
+key = input()
+if key in d:
+    del d[key]
+print(d)
+"""
+
+# Question 16
+"""
+Students = {'d 01': 'Abc', 'd 0 2': 'Xyz', 'd0 3': 'Pqr'}
+cleaned = {k.replace(" ", ""): v for k, v in Students.items()}
+print(cleaned)
+"""
+
+# Question 17
+"""
+d = {'a': 10, 'b': 20, 'c': 30}
+print(sum(d.values()))
+"""
+
+# Question 18
+"""
+mydictionary1 = {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36}
+mydictionary2 = {7: 49, 8: 64, 9: 81, 10: 100, 11: 121, 12: 144}
+mydictionary1.update(mydictionary2)
+print(mydictionary1)
+"""
+
+# Question 19
+"""
+dic1 = {1:10, 2:20}
+dic2 = {3:30, 4:40}
+dic3 = {5:50, 6:60}
+new_dic = {}
+new_dic.update(dic1)
+new_dic.update(dic2)
+new_dic.update(dic3)
+print(new_dic)
 """
