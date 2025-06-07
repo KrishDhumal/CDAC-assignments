@@ -49,3 +49,33 @@ def myfun():
 show(10,20)
 
 """
+"""
+def main(fun):
+    fun()
+    print("inside caller function")
+
+def disp():
+    print("inside disp function")
+
+main(disp)
+"""
+""""
+def disp1():
+    print("inside disp1")
+    return disp2
+
+def disp2():
+    print("inside disp2")
+
+var1=disp1()
+var1()  # here "disp2()" will be called
+"""
+"""def disp1():
+    print("inside disp1")
+    return disp2
+
+def disp2():
+    print("inside disp2")
+
+disp1()()    # no need to collect the returned function in any variable
+"""

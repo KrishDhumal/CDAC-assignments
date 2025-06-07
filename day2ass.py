@@ -157,3 +157,116 @@ print("\nAutomatic cars:")
 for car in automatic_cars:
     print(f"Model: {car.get_model()}, Automatic: {car.get_isautomatic()}")
 """
+
+
+#TUPLE Questions
+
+# Question 1
+"""
+lst = [10, 20, 30, (40, 50), 60]
+count = 0
+for item in lst:
+    if isinstance(item, tuple):
+        break
+    count += 1
+print("Count before tuple:", count)
+"""
+
+# Question 2
+"""
+tup = (23, 5, 89, 12, 47)
+asc = tuple(sorted(tup))
+desc = tuple(sorted(tup, reverse=True))
+print("Original tuple:", tup)
+print("Sorted ascending:", asc)
+print("Sorted descending:", desc)
+"""
+
+# Question 3
+"""
+tup = (1, 2, 3, 2, 4, 5, 1, 6, 2)
+repeated = set([x for x in tup if tup.count(x) > 1])
+print("Repeated items:", repeated)
+"""
+
+
+#SET questions
+# Question 1
+"""
+s = set()
+print("Enter 10 values:")
+for _ in range(10):
+    val = input()
+    s.add(val)
+
+remove_val = input("Enter a value to remove: ")
+s.discard(remove_val)
+
+print("Updated set:", s)
+"""
+
+#String Questions
+
+# Question 1
+"""
+s = input("Enter a string: ")
+if s == s[::-1]:
+    print("It is a palindrome")
+else:
+    print("It is not a palindrome")
+"""
+
+# Question 2
+"""
+s = input("Enter a string: ")
+start = int(input("Enter start index: "))
+end = int(input("Enter end index: "))
+print("Sliced string:", s[start:end])
+"""
+
+# Question 3
+"""
+s = input("Enter a string: ")
+vowels = 'aeiouAEIOU'
+count = sum(1 for ch in s if ch in vowels)
+print("Number of vowels:", count)
+"""
+
+# Question 4
+"""
+s = input("Enter a string: ")
+repeated = set()
+for ch in s:
+    if s.count(ch) > 1:
+        repeated.add(ch)
+print("Repeated characters:", repeated)
+"""
+
+# Question 5
+"""
+s = input("Enter a string: ")
+words = s.split()
+print("Number of words:", len(words))
+"""
+
+# Question 6
+"""
+s = input("Enter a sentence: ")
+words = s.split()
+reversed_sentence = ' '.join(reversed(words))
+print("Reversed sentence:", reversed_sentence)
+"""
+
+# Question 7
+"""
+def is_pangram(sentence):
+    sentence = sentence.lower()
+    alphabet = set('abcdefghijklmnopqrstuvwxyz')
+    return alphabet.issubset(set(sentence))
+
+s = input("Enter a sentence: ")
+if is_pangram(s):
+    print("It is a pangram")
+else:
+    print("It is not a pangram")
+"""
