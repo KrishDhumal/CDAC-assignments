@@ -119,4 +119,5 @@ print("add is the reference to the object of type\t",type(add))
 print("address of the object where add refers to is\t", id(add))
 print(add(5,6))
 """
-kfsadffdsfsd
+add = lambda x,y:x+y
+print(add(10,20))
