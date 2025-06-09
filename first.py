@@ -79,6 +79,19 @@ def disp2():
 
 disp1()()    # no need to collect the returned function in any variable
 """
+#print(dir(__builtins__))
+""""
+num=10
+name="abc"
+print("globals are\t",globals())
+
+def outer():
+    b=30
+    print("locals for outer\t",locals())
+    def inner():
+        a=15
+        print("locals for inner\t", locals())
+    inner()
 
 outer()
 """
