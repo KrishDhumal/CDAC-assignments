@@ -121,4 +121,3 @@ print(add(5,6))
 """
 add = lambda x,y:x+y
 print(add(10,20))
-d
