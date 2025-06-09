@@ -79,3 +79,30 @@ def disp2():
 
 disp1()()    # no need to collect the returned function in any variable
 """
+
+outer()
+"""
+"""
+num=100
+var = num
+print(num)
+del num
+print(num)
+print(var) #var wont print as well 
+"""
+"""def hehe():
+    print("this is a function from first ")
+print("Will print regardless ")
+"""
+""""
+def add(a,b):
+    return a+b
+
+if __name__== '__main__' : print(add(10, 20))
+print(__name__)
+"""
+"""add=lambda x,y:x+y
+print("add is the reference to the object of type\t",type(add))
+print("address of the object where add refers to is\t", id(add))
+print(add(5,6))
+"""
