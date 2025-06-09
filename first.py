@@ -121,3 +121,16 @@ print(add(5,6))
 """
 add = lambda x,y:x+y
 print(add(10,20))
+"""
+from multipledispatch import dispatch
+
+@dispatch(int, int)
+def add(a, b):
+    return a + b
+
+@dispatch()
+def add():
+    return 10 + 20
+
+print(add())        # This will call the version with no arguments → 30
+print(add(5, 7))    # This will call the version with two ints → 12
