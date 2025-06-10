@@ -4,6 +4,8 @@ for i in range(5):
 print(sum)
 for i in range(1,10):
     print(i)"""
+#from idlelib.debugobj import dispatch
+
 """expense_list=[1230,2240,1500,1678,2020,1580,2240,1450,'1500',1245,2300]
 total_expense=0
 
@@ -119,9 +121,10 @@ print("add is the reference to the object of type\t",type(add))
 print("address of the object where add refers to is\t", id(add))
 print(add(5,6))
 """
-add = lambda x,y:x+y
+"""add = lambda x,y:x+y
 print(add(10,20))
 """
+""""
 from multipledispatch import dispatch
 
 @dispatch(int, int)
@@ -192,5 +195,19 @@ print(hasattr(s1,'disp'))
 print(hasattr(s1,'__init__'))
 
 """
+from multipledispatch import dispatch
 
 
+class First:
+    @dispatch(int)
+    def disp(self, val):
+        print(val)
+
+    @dispatch(str)
+    def disp(self, val):
+        print(val)
+
+
+f1 = First()
+f1.disp("hello")
+f1.disp(100)
