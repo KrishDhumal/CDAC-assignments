@@ -134,3 +134,63 @@ def add():
 
 print(add())        # This will call the version with no arguments → 30
 print(add(5, 7))    # This will call the version with two ints → 12
+"""
+
+
+"""class student :
+    def __init__(self,name,age,rollNo):
+        self.name = name
+        self.age = age
+        self.rollNo = rollNo
+    def display(self):
+        print(self.name,self.age,self.rollNo)
+    def __del__(self):
+        print("hello")
+s1 = student("John",22,1)
+s2 = student ("krish",21,23)
+s1 = s2
+s1.display()
+s2.display()
+print(type(s1))
+print(type(s2))
+print (type(student))
+"""
+"""class First:
+    def mainfunction(self):
+        print("address of self is\t",id(self))
+        print("type of self is\t",type(self))
+        print("inside main function")
+f1=First()
+print("address of f1 is\t",id(f1))
+f1.mainfunction()
+
+f2=First()
+print("address of f2 is\t",id(f2))
+print("let's invoke mainfunction with f2")
+f2.mainfunction()
+"""
+
+""""
+class Base:
+    def __init__(self,num):
+       self.num=num
+    def disp(self):
+        print(self.num)
+s1=Base(10)
+print(s1)
+print(type(s1.__init__))
+print(type(s1.disp))
+
+class Base:
+    def __init__(self,num):
+       self.num=num
+    def disp(self):
+        print(self.num)
+s1=Base(10)
+print(s1)
+print(hasattr(s1,'disp'))
+print(hasattr(s1,'__init__'))
+
+"""
+
+
