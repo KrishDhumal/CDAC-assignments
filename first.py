@@ -211,3 +211,38 @@ class First:
 f1 = First()
 f1.disp("hello")
 f1.disp(100)
+
+
+class Parent:
+    def __init__(self):
+        print("Hello from parent")
+
+class Child(Parent):
+    def __init__(self):
+        super().__init__()  # Optional: only if you want to call Parent's constructor too
+        print("Hello from the child")
+
+# Create an object of Child
+c = Child()
+"""
+"""class Base:
+    def __init__(self,num1):
+        self.num1=num1
+        print("Base class constructor ",self.num1)
+    def disp1(self):       # overridden method
+        print("Base class disp1 method")
+
+
+class Sub(Base):
+    def __init__(self):
+        super().__init__(100)    # invoking Base class parameterized constructor explicitly
+        print("Sub class constructor")
+
+    def disp1(self):      #  overriding method
+        print("Sub class disp1 method")
+
+s1 = Sub()
+print(id(s1))
+
+s1.disp1()
+"""
