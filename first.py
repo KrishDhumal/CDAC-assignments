@@ -195,6 +195,7 @@ print(hasattr(s1,'disp'))
 print(hasattr(s1,'__init__'))
 
 """
+""""
 from multipledispatch import dispatch
 
 
@@ -211,6 +212,58 @@ class First:
 f1 = First()
 f1.disp("hello")
 f1.disp(100)
+"""
+""""
+from multipledispatch import dispatch
+
+
+class Sample:
+    @dispatch(int)
+    def __init__(self, num):
+        self.num = num
+
+    @dispatch(str)
+    def __init__(self, name):
+        self.name = name
+
+
+a1 = Sample(10)
+a2 = Sample("Kunal")
+print(a1.num)
+print(a2.name)
+"""
+"""
+class Account:
+    rate=9                  # class variable
+    def __init__(self,accid,name,balance):
+        self.accid=accid                    # instance variable
+        self.name=name                      # instance variable
+        self.balance=balance                # instance variable
+
+c1=Account(1,"Abc",40000)
+c2=Account(2,"Xyz",70000)
+print(c1.accid,"\t",c1.name,"\t",c1.balance)
+print(c2.accid,"\t",c2.name,"\t",c2.balance)
+c1.balance=43000
+c2.balance=78000
+print(c1.accid,"\t",c1.name,"\t",c1.balance)
+print(c2.accid,"\t",c2.name,"\t",c2.balance)
+print(Account.rate,"\t",c1.rate,"\t",c2.rate)
+Account.rate=12
+print(Account.rate,"\t",c1.rate,"\t",c2.rate)
+print(id(c1.name),"\t",id(c2.name))
+print(id(Account.rate),"\t",id(c1.rate),"\t",id(c2.rate)) 
+"""
+
+"""mylist = [5,6,7,2]
+list2 = [2.3,3,3]
+for (a,b) in zip(mylist,list2):
+    print(a,b)
+print(mylist[0:3:2])
+list=[i for i in range(1,21) if i%2==0]
+print(list)
+mylist.sort()
+print(mylist)
 
 
 class Parent:
