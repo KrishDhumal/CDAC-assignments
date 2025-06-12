@@ -60,3 +60,13 @@ b) lambda
 display_lambda = lambda *args: [print(item) for item in args]
 display_lambda(1, 2, 3, 4)
 """
+""""
+# how to read from a file
+
+
+with open("funcAss.py","r") as f:
+    data=f.read()
+    print(data)
+
+print("Done")
+"""
