@@ -378,3 +378,88 @@ perform(HouseWife())
 
 #ob = Person()   #  TypeError: Can't instantiate abstract class Person with abstract method performduties
 """
+#Duck type
+""""
+class India:
+    def capital(self):
+        print("New Delhi is the capital of India")
+    def language(self):
+        print("Hindi is the most widely spoken language of India")
+    def type(self):
+        print("India is developing country")
+
+class USA:
+    def capital(self):
+        print("Washington, D.C. is the capital of USA")
+    def language(self):
+        print("English is the primary language of USA")
+    def type(self):
+        print("USA is a developed country")
+
+
+def perform(obj):
+    obj.capital()
+    obj.language()
+    obj.type()
+
+perform(India())
+print("Let's pass USA")
+perform(USA())
+"""
+""""
+var=5
+try:
+    print(var/0)
+except ZeroDivisionError:
+    print("You can't devide any number by 0")
+print("done")
+mydict = {1:'Krish',2:'ramesh'}
+print(mydict[1])
+mydict[4] = 'krish2'
+print(mydict)
+tuple = (1,2,3)
+tuple2 = (4,5,6)
+print(tuple+tuple2)
+"""
+""""
+def double(var):
+	if var<=0:
+		raise Exception("IllegalValue Exception")
+	return var*var
+
+def fun():
+	try:
+		print(double(4))
+	except Exception as e:
+		print("error is\t",e.__str__())
+	print("Done")
+fun()
+
+"""
+
+# Exception class has following "__init__()" method:
+
+""" 
+def __init__(self,message=None)
+	self.message=message
+"""
+
+""""
+class IllegalValue(Exception):
+	pass
+
+def double(var):
+	if var<=0:
+		raise IllegalValue("Number cannot be negative or zero")
+		# raise IllegalValue()
+	return var*var
+
+def fun():
+	try:
+		print(double(-4))
+	except Exception as e:
+		print("error is\t",e.__str__())
+	print("Done")
+fun()
+"""
+
