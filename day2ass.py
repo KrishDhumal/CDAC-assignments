@@ -528,3 +528,41 @@ new_dic.update(dic2)
 new_dic.update(dic3)
 print(new_dic)
 """
+
+# Question 1
+"""
+create 3 functions "show1()","show2()" and "show3()"
+now define a function "caller" in such a way that it can accept any function as an argument and invoke the same.
+invoke caller function by passing show1, show2 and show3
+
+
+def show1():
+    print("Inside show1")
+
+def show2():
+    print("Inside show2")
+
+def show3():
+    print("Inside show3")
+
+def caller(f):
+    f()
+
+caller(show1)
+caller(show2)
+caller(show3)
+"""
+
+# Question 2
+"""
+define nested function and show how will you invoke it.
+
+
+def outer():
+    print("Inside outer function")
+    def inner():
+        print("Inside inner function")
+    inner()
+
+outer()
+"""
