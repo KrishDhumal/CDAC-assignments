@@ -480,3 +480,15 @@ for row in cursor.fetchall():
     print(row)
 
 conn.close()
+"""
+#Data Base Handling
+import mysql.connector as m
+mydatabase=m.connect(host="localhost",user="root",password="krish1209",database="pythondb1")
+cursor=mydatabase.cursor()
+cursor.execute("use my_python_db")
+query="select * from dept"
+cursor.execute(query)
+result=cursor.fetchall()     # here we get tuples equivalent to the number of records
+for record in result:
+    print(record)#   commit() is compulsory
+    mydatabase.commit()
