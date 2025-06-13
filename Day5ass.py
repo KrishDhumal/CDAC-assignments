@@ -137,3 +137,29 @@ class Sub extends Base {
     }
 }
 """
+#Exception handling
+
+"""
+class VotingNotAllowedException(Exception):
+    def __init__(self, message="Age is less than 18. Voting not allowed."):
+        super().__init__(message)
+
+
+class Voter:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        if age < 18:
+            raise VotingNotAllowedException(f"{name} is not eligible to vote. Age: {age}")
+        else:
+            print(f"{name} is eligible to vote. Age: {age}")
+"""
+#Question 3
+"""
+try:
+    name = input("Enter your name: ")
+    age = int(input("Enter your age: "))
+    person = Voter(name, age)
+except VotingNotAllowedException as e:
+    print("Exception caught:", e)
+"""
