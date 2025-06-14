@@ -481,6 +481,7 @@ for row in cursor.fetchall():
 
 conn.close()
 """
+""""
 #Data Base Handling
 import mysql.connector as m
 mydatabase=m.connect(host="localhost",user="root",password="krish1209",database="pythondb1")
@@ -492,3 +493,5 @@ result=cursor.fetchall()     # here we get tuples equivalent to the number of re
 for record in result:
     print(record)#   commit() is compulsory
     mydatabase.commit()
+"""
+
